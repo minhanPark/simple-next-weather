@@ -4,6 +4,8 @@ import { getCurrentWeather } from "@/utils/currentWeather";
 import { getTime } from "@/utils/getTime";
 import RevalidateButton from "@/components/RevalidateButton";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const res = await getCurrentWeather("Seoul");
   const time = await getTime(res.location.tz_id);
